@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>XTI · Calzado con Francisco Baz Maldonado</title>
+<meta name="description" content="Calzado XTI para mujer, hombre y niños. Atención personal de Francisco Baz Maldonado, comercial oficial.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14172b; --cobalt:#1f3fff; --coral:#ffd3da; --lemon:#f2e85c; --paper:#fbfaf8; --mute:#5b6075;
+  --f-display:"Bricolage Grotesque",Arial,sans-serif; --f-body:"Figtree",Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:400 1.0625rem/1.6 var(--f-body);color:var(--ink);background:var(--paper)}
+img,svg{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--cobalt);outline-offset:3px}
+.wrap{width:min(1160px,92%);margin-inline:auto}
+h1,h2,h3{font-family:var(--f-display);line-height:1.02;letter-spacing:-.02em}
+h2{font-size:clamp(2rem,4.5vw,3.25rem);font-weight:800}
+.btn{display:inline-block;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);background:var(--ink);color:#fff;cursor:pointer;font:600 1rem var(--f-body);transition:transform .15s}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink)}
+
+/* Cabecera */
+header{position:sticky;top:0;z-index:10;background:rgba(251,250,248,.92);backdrop-filter:blur(8px);border-bottom:1px solid #e6e3dd}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:block;text-decoration:none}.logo img{display:block;width:86px;height:auto}
+nav ul{display:flex;gap:1.75rem;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:500}
+nav a:hover{color:var(--cobalt)}
+
+/* Hero */
+.hero{background:var(--cobalt);color:#fff;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:2rem;min-height:600px;padding-block:3rem}
+.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);font-weight:800}
+.hero p{max-width:34ch;margin:1.4rem 0 2rem;font-size:1.2rem;color:#e3e8ff}
+.hero .btn{background:var(--lemon);border-color:var(--lemon);color:var(--ink)}
+.hero .btn.ghost{background:transparent;color:#fff;border-color:#fff;margin-left:.5rem}
+.stage{position:relative;display:grid;place-items:center}
+.stage::before{content:"";position:absolute;width:88%;aspect-ratio:1;border-radius:50%;background:var(--coral)}
+.stage svg{position:relative;width:118%;max-width:none;transform:rotate(-8deg);filter:drop-shadow(0 26px 22px rgba(10,15,80,.35));animation:drop .9s cubic-bezier(.2,.9,.3,1.2) both}
+@keyframes drop{from{transform:translateY(-90px) rotate(-22deg);opacity:0}}
+.swatches{position:absolute;bottom:-4px;display:flex;gap:.6rem;align-items:center;background:#fff;color:var(--ink);padding:.5rem .9rem;border-radius:999px;font-size:.9rem;font-weight:600}
+.swatches button{width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1.5px var(--ink);cursor:pointer;background:var(--s)}
+.swatches button[aria-pressed=true]{box-shadow:0 0 0 3px var(--cobalt)}
+
+/* Productos */
+section{padding-block:clamp(4rem,8vw,6.5rem)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:1.5rem;margin-bottom:2.5rem}
+.head p{color:var(--mute);margin-top:.6rem;max-width:46ch}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap}
+.filters button{padding:.55rem 1.1rem;border-radius:999px;border:2px solid var(--ink);background:transparent;font:600 .95rem var(--f-body);cursor:pointer}
+.filters button[aria-pressed=true]{background:var(--ink);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.5rem}
+.card{display:flex;flex-direction:column}
+.card[hidden]{display:none}
+.lid{background:var(--bg);border-radius:28px 28px 28px 6px;aspect-ratio:1.55;display:grid;place-items:center;overflow:hidden;transition:border-radius .25s}
+.card:hover .lid{border-radius:6px 28px 28px 28px}
+.lid img{width:100%;height:100%;object-fit:contain;padding:.35rem;transition:transform .3s}
+.card:hover .lid img{transform:scale(1.05)}
+.about-photo{background:var(--paper);border-radius:28px;overflow:hidden;aspect-ratio:4/3}
+.about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.lid svg{width:92%;transform:rotate(-6deg);transition:transform .3s}
+.card:hover .lid svg{transform:rotate(-2deg) scale(1.05)}
+.card h3{font-size:1.3rem;margin-top:1rem;font-weight:700}
+.card .meta{color:var(--mute);font-size:.95rem}
+.card .row{display:flex;justify-content:space-between;align-items:center;margin-top:.5rem}
+.price{font:700 1.25rem var(--f-display)}
+.card a.ask{font-weight:600;color:var(--cobalt);text-decoration:none;border-bottom:2px solid currentColor}
+.note{margin-top:2rem;font-size:.9rem;color:var(--mute)}
+
+/* Francisco */
+.about{background:var(--lemon)}
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.about h2{margin-bottom:1.2rem}
+.about p+p{margin-top:1rem}
+.facts{display:grid;gap:1rem}
+.fact{background:var(--paper);border-radius:22px;padding:1.4rem 1.6rem}
+.fact strong{display:block;font:700 1.25rem var(--f-display);margin-bottom:.2rem}
+.fact span{color:var(--mute)}
+
+/* Contacto */
+.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:3rem}
+.info dl{margin-top:1.8rem;display:grid;gap:1.1rem}
+.info dt{font-weight:600}
+.info dd{margin:0;color:var(--mute)}
+form{display:grid;gap:1rem;background:#fff;border:2px solid var(--ink);border-radius:28px;padding:clamp(1.4rem,3vw,2.2rem)}
+label{display:grid;gap:.35rem;font-weight:600;font-size:.95rem}
+input,textarea{font:400 1rem var(--f-body);padding:.8rem 1rem;border:2px solid #cfcbc3;border-radius:14px;background:var(--paper);color:var(--ink)}
+input:focus,textarea:focus{outline:none;border-color:var(--cobalt)}
+textarea{min-height:120px;resize:vertical}
+#ok{color:var(--cobalt);font-weight:600;min-height:1.4em}
+
+footer{background:var(--ink);color:#c9cce0;padding-block:2.2rem;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem}
+footer b{color:#fff}
+
+@media (max-width:860px){
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
+  .hero .wrap{min-height:0}
+  .stage{margin-top:1rem;padding-bottom:2rem}
+  nav ul{gap:1rem;font-size:.95rem}
+  .nav .logo+nav li:nth-child(n+3){display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<!-- Zapatilla reutilizable: el color sale de --c -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="shoe" viewBox="0 0 320 170">
+    <rect x="14" y="128" width="296" height="26" rx="13" fill="#fff"/>
+    <rect x="14" y="128" width="296" height="7" rx="3.5" fill="#14172b" opacity=".12"/>
+    <path d="M22 122c0-26 20-36 46-42l30-44c10-14 30-14 40-2l16 20c28 14 72 14 110 34 24 12 34 22 34 34v6z" fill="var(--c,#1f3fff)"/>
+    <path d="M22 122c0-14 6-22 16-28l60 28z" fill="#14172b" opacity=".18"/>
+    <path d="M250 88c26 10 44 22 44 34v0H236c10-14 12-26 14-34z" fill="#fff" opacity=".9"/>
+    <g stroke="#fff" stroke-width="5" stroke-linecap="round"><path d="M126 52l22 14M114 68l26 14M102 84l30 12"/></g>
+    <path d="M70 80c14-6 30-8 44-6" stroke="#14172b" stroke-width="4" stroke-linecap="round" fill="none" opacity=".25"/>
+  </symbol>
+</svg>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="XTI, inicio"><img src="imagenes/logo-xti.png" alt="Logo XTI"></a>
+    <nav aria-label="Principal">
+      <ul>
+        <li><a href="#productos">Calzado</a></li>
+        <li><a href="#atencion">Atención personal</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" style="padding:0">
+    <div class="wrap">
+      <div>
+        <h1>Pisa fuerte. Cuesta poco.</h1>
+        <p>Zapatillas, botines y sandalias XTI con las últimas tendencias. Elige tu pedido con Francisco Baz Maldonado, comercial de la marca.</p>
+        <a class="btn" href="#productos">Ver calzado</a>
+        <a class="btn ghost" href="#contacto">Pedir catálogo</a>
+      </div>
+      <div class="stage">
+        <svg viewBox="0 0 320 170" role="img" aria-label="Zapatilla XTI en el color elegido" id="hero-shoe"><use href="#shoe"/></svg>
+        <div class="swatches" role="group" aria-label="Color de la zapatilla">
+          Color
+          <button style="--s:#1f3fff" aria-label="Azul" aria-pressed="true" data-c="#1f3fff"></button>
+          <button style="--s:#e8344e" aria-label="Rojo" aria-pressed="false" data-c="#e8344e"></button>
+          <button style="--s:#14172b" aria-label="Negro" aria-pressed="false" data-c="#14172b"></button>
+          <button style="--s:#f2e85c" aria-label="Amarillo" aria-pressed="false" data-c="#f2e85c"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos">
+    <div class="wrap">
+      <div class="head">
+        <div>
+          <h2>Calzado de temporada</h2>
+          <p>Una selección de modelos XTI. Pide medidas, colores y disponibilidad completa.</p>
+        </div>
+        <div class="filters" role="group" aria-label="Filtrar por categoría">
+          <button aria-pressed="true" data-f="all">Todo</button>
+          <button aria-pressed="false" data-f="mujer">Mujer</button>
+                  </div>
+      </div>
+
+      <div class="grid" id="grid">
+        <article class="card" data-cat="mujer" style="--bg:#f4eee9">
+          <div class="lid"><img src="imagenes/zapato1.jpg" alt="Zueco de mujer plano XTI 14652405"></div>
+          <h3>ZUECO DE MUJER PLANO XTI 14652405</h3><p class="meta">XTI · Mujer</p>
+          <div class="row"><span class="price">39,95 €</span><a class="ask" href="#contacto" data-m="Zueco de mujer plano XTI 14652405">Consultar</a></div>
+        </article>
+        <article class="card" data-cat="mujer" style="--bg:#f2f2f2">
+          <div class="lid"><img src="imagenes/zapato2.jpg" alt="Zapato de mujer plano XTI 14648503"></div>
+          <h3>ZAPATO DE MUJER PLANO XTI 14648503</h3><p class="meta">XTI · Mujer</p>
+          <div class="row"><span class="price">39,95 €</span><a class="ask" href="#contacto" data-m="Zapato de mujer plano XTI 14648503">Consultar</a></div>
+        </article>
+        <article class="card" data-cat="mujer" style="--bg:#eeeeee">
+          <div class="lid"><img src="imagenes/zapato3.jpg" alt="Zapato de mujer plano XTI 14630101"></div>
+          <h3>ZAPATO DE MUJER PLANO XTI 14630101</h3><p class="meta">XTI · Mujer</p>
+          <div class="row"><span class="price">49,95 €</span><a class="ask" href="#contacto" data-m="Zapato de mujer plano XTI 14630101">Consultar</a></div>
+        </article>
+        <article class="card" data-cat="mujer" style="--bg:#f1e9e7">
+          <div class="lid"><img src="imagenes/zapato4.jpg" alt="Zapato de mujer plano Carmela 16435602"></div>
+          <h3>ZAPATO DE MUJER PLANO CARMELA 16435602</h3><p class="meta">Carmela · Mujer</p>
+          <div class="row"><span class="price">79,95 €</span><a class="ask" href="#contacto" data-m="Zapato de mujer plano Carmela 16435602">Consultar</a></div>
+        </article>
+      </div>
+      <p class="note">Modelos y precios de ejemplo. Sustitúyelos por los reales del catálogo XTI.</p>
+    </div>
+  </section>
+
+  <section class="about" id="atencion">
+    <div class="wrap">
+      <div class="about-photo">
+        <img src="imagenes/francisco.jpg" alt="Francisco Baz Maldonado">
+      </div>
+      <div>
+        <h2>Te atiende Francisco Baz Maldonado</h2>
+        <p>Francisco es comercial de XTI y trabaja con tiendas y negocios de la zona. Te enseña la colección, te asesora sobre qué modelos funcionan mejor en tu local y gestiona tu pedido.</p>
+        <p>Si tienes una zapatería o quieres abrir una línea de calzado, escríbele y concertad una visita.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Colección completa</strong><span>Mujer, hombre y niños en cada temporada.</span></div>
+        <div class="fact"><strong>Visita con muestrario</strong><span>Ves y tocas los modelos antes de decidir.</span></div>
+        <div class="fact"><strong>Pedidos sin complicaciones</strong><span>Tallas, colores y plazos de entrega claros.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="wrap">
+      <div class="info">
+        <h2>Pide tu catálogo</h2>
+        <p style="color:var(--mute);margin-top:.8rem">Cuéntanos qué buscas y Francisco te responde.</p>
+        <dl>
+          <div><dt>Comercial</dt><dd>Francisco Baz Maldonado</dd></div>
+          <div><dt>Teléfono</dt><dd><a href="tel:+34000000000">[Añade el teléfono]</a></dd></div>
+          <div><dt>Correo</dt><dd><a href="mailto:correo@ejemplo.com">[Añade el correo]</a></dd></div>
+          <div><dt>Zona</dt><dd>[Añade la zona o la dirección]</dd></div>
+        </dl>
+      </div>
+      <form id="form">
+        <label>Nombre<input name="n" required autocomplete="name"></label>
+        <label>Teléfono<input name="t" type="tel" required autocomplete="tel"></label>
+        <label>Mensaje<textarea name="m" id="msg" placeholder="Modelo, tallas, cantidad…"></textarea></label>
+        <button class="btn" type="submit">Enviar mensaje</button>
+        <p id="ok" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>xti</b> · Calzado con atención personal</span>
+    <span>Francisco Baz Maldonado, comercial XTI</span>
+  </div>
+</footer>
+
+<script>
+// Color de la zapatilla del hero
+const hero=document.getElementById('hero-shoe'),sw=document.querySelectorAll('.swatches button');
+sw.forEach(b=>b.addEventListener('click',()=>{
+  hero.style.setProperty('--c',b.dataset.c);
+  sw.forEach(x=>x.setAttribute('aria-pressed',x===b));
+}));
+// Filtro de productos
+const fb=document.querySelectorAll('.filters button'),cards=document.querySelectorAll('.card');
+fb.forEach(b=>b.addEventListener('click',()=>{
+  fb.forEach(x=>x.setAttribute('aria-pressed',x===b));
+  cards.forEach(c=>c.hidden=b.dataset.f!=='all'&&c.dataset.cat!==b.dataset.f);
+}));
+// "Consultar" rellena el mensaje
+document.querySelectorAll('.ask').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('msg').value='Hola Francisco, me interesa el modelo: '+a.dataset.m+'.';
+}));
+// Formulario: abre el correo (cambia la dirección por la real)
+document.getElementById('form').addEventListener('submit',e=>{
+  e.preventDefault();
+  const f=e.target,body=encodeURIComponent(f.m.value+'\n\n'+f.n.value+' · '+f.t.value);
+  location.href='mailto:correo@ejemplo.com?subject=Consulta%20XTI&body='+body;
+  document.getElementById('ok').textContent='Se abrirá tu correo para enviar el mensaje.';
+});
+</script>
+</body>
+</html>
